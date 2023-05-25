@@ -1,0 +1,24 @@
+<%= render "shared/banner" %>
+
+<div class="link">
+  <span class="action-btn"><%= link_to "Back", lists_path %></span>
+  <span class="action-btn"><%= link_to "Add a Bookmark", new_list_bookmark_path(@list) %></span>
+</div>
+
+<div class="container-show">
+  <% @list.bookmarks.each do |bookmark| %>
+      <div class="card-trip">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+        <div class="card-trip-infos">
+          <div class="card-text">
+            <h2><%= bookmark.movie.title %> </h2>
+            <p><%= bookmark.movie.overview %></p>
+          </div>
+          <div class="card-btn">
+            <p><i class="fa-solid fa-quote-left"></i> <%= bookmark.comment %></p>
+            <span><i class="fa-regular fa-trash-can"></i>  <%= link_to "Delete", bookmark_path(bookmark), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}, class: "red"%></span>
+          </div>
+          </div>
+        </div>
+  <% end %>
+</div>
