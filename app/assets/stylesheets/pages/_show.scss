@@ -1,6 +1,8 @@
 .container-show{
-  display: flex;
-  gap: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 200px);
+  grid-gap: 14em;
+  padding: 2em;
 }
 .link{
   height: 4em;
@@ -9,5 +11,10 @@
   justify-content: flex-end;
   align-items: center;
   gap: 1em;
+}
 
+.card-trip-infos{
+    .card-btn{
+      padding-top: 1.8em;
+    }
 }
