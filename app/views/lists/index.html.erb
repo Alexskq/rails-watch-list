@@ -14,9 +14,32 @@
 <div class="container-show">
   <%@lists.each do |list| %>
       <div class="card-trip-home">
-        <div class="card-img-list">
+      <% if list.bookmarks.first != nil %>
+        <% url = ("url" + "(" + list.bookmarks.first.movie.poster_url + ")")%>
+        <%else %>
+        <% url = ("url(https://hips.hearstapps.com/hmg-prod/images/hbz-042517-oldhollywood-1493167401.jpg)") %>
+        <%end%>
+        <div class="card-img-list" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), <%=url%>">
+
             <h2><%= link_to list.name, list_path(list) %></h2>
           </div>
         </div>
   <% end %>
+  <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <span class="bg-flip">Add a List</span>
+          </div>
+            <div class="flip-card-back">
+            <%= simple_form_for(@list) do |f| %>
+            <%= f.label :new_list %>
+            <%= f.text_field :name, placeholder: " New List" %>
+            <%= f.submit "Create", class: "btn-flip"%>
+          <% end %>
+          </div>
+        </div>
+      </div>
+  </div>
+
+
 </div>

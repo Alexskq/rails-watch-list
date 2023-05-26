@@ -19,10 +19,9 @@
 }
 
 .card-img-list{
-  background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://png.pngtree.com/background/20210712/original/pngtree-modern-double-color-futuristic-neon-background-picture-image_1181573.jpg);
   height: 12.5em;
-  width: 25em;
-  background-size: cover;
+  width: 30em;
+  object-fit: cover;
   display: flex;
   justify-content: center;
   align-items: center;

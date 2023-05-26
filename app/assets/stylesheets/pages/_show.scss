@@ -1,7 +1,7 @@
 .container-show{
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
-  grid-gap: 14em;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
   padding: 2em;
 }
 .link{
