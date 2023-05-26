@@ -9,9 +9,9 @@
   <%= link_to "Create a list", new_list_path, class: "action-btn"%>
 </div>
 
+<div class="container ">
 <h3>My List</h3>
-
-<div class="container-show">
+<div class="home">
   <%@lists.each do |list| %>
       <div class="card-trip-home">
       <% if list.bookmarks.first != nil %>
@@ -20,11 +20,11 @@
         <% url = ("url(https://hips.hearstapps.com/hmg-prod/images/hbz-042517-oldhollywood-1493167401.jpg)") %>
         <%end%>
         <div class="card-img-list" style="background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), <%=url%>">
-
             <h2><%= link_to list.name, list_path(list) %></h2>
           </div>
         </div>
   <% end %>
+
   <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -38,6 +38,7 @@
           <% end %>
           </div>
         </div>
+      </div>
       </div>
   </div>
 

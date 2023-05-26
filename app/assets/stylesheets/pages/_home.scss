@@ -9,9 +9,13 @@
       color:white;
     }
 }
-
-.container-show{
-  padding-left: 2em;
+.home{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 20px;
+}
+.container{
+  padding: 0 2em;
 }
 
 .card-trip-home{
@@ -20,7 +24,7 @@
 
 .card-img-list{
   height: 12.5em;
-  width: 30em;
+  width: 100%;
   object-fit: cover;
   display: flex;
   justify-content: center;

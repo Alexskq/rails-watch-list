@@ -5,7 +5,7 @@
   <span class="action-btn"><%= link_to "Add a Bookmark", new_list_bookmark_path(@list) %></span>
 </div>
 
-<div class="container-show">
+<div class="container-show home">
   <% @list.bookmarks.each do |bookmark| %>
       <div class="card-trip">
        <%= image_tag bookmark.movie.poster_url%>

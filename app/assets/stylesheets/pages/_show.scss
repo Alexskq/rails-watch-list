@@ -18,3 +18,10 @@
       padding-top: 1.8em;
     }
 }
+
+
+@media screen and (max-width: 500px) {
+  .home {
+    grid-template-columns: 1fr;
+  }
+}
